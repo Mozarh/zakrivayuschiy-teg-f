@@ -15,6 +15,356 @@
 */
 
 .page {
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght'var(--text-font-size);
+  color: var(--main-color);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-block-start: 100px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  font-family: var(--accent-font), sans-serif;
+}
+
+.card {
+  background: var(--background-color);
+  max-inline-size: 696px;
+  margin-inline: auto;
+  border: var(--main-color) solid 2px;
+}
+
+.header-title {
+  padding-block-start: clamp(7.5rem, 7.148rem + 1.502vi, 8.5rem);
+  padding-block-end: 20px;
+  font-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);
+}
+
+.header-subtitle {
+  font-size: clamp(0.875rem, 0.677rem + 0.845vi, 1.438rem);
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 14px;
+  inline-size: 84px;
+}
+
+.header-subtitle,
+.theme-menu {
+  padding-block-end: 25px;
+}
+
+.theme-menu__item {
+  font-size: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  padding: 0px 13px;
+  transition: opacity 0.3s ease;
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  inset-inline-start: -9px;
+  animation: delta 0.5s ease-in-out infinite alternate;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.theme-menu__button:not(:disabled):after {
+  content: '';
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 1px;
+  transition: transform 0.3s ease;
+  background: currentColor;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.main {
+  margin-block-start: 100px;
+  font-family: var(--main-font), sans-serif;
+  display: grid;
+  justify-items: center;
+}
+
+.card-list {
+  display: grid;
+  gap: 50px;
+}
+
+.card-header {
+  border-block-end: var(--main-color) solid 2px;
+  padding: 4px 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  line-height: 1.2;
+  font-variation-settings: 'wght'var(--title-font-size);
+}
+
+.container-card-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-label {
+  position: absolute;
+  z-index: 1;
+  font-family: var(--accent-font), sans-serif;
+  font-variation-settings: 'wght'var(--text-font-size);
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--main-color);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow: 0 0 1px var(--text-stroke);
+
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+}
+
+.card-img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  border-block-end: var(--main-color) solid 2px;
+}
+
+.fritrek {
+  filter: grayscale(0.8);
+}
+
+.sprint {
+  filter: saturate(158%);
+}
+
+.ono-nado {
+  filter: sepia(80%);
+}
+
+.vk {
+  filter: invert(0.7);
+}
+
+.friend {
+  filter: brightness(200%);
+}
+
+.chill {
+  filter: contrast(20%);
+}
+
+.concentrate {
+  filter: blur(0.5rem);
+}
+
+.yandex {
+  filter: brightness(140%) blur(0.1rem) hue-rotate(90deg);
+}
+
+.card-content {
+  margin: 25px;
+  display: grid;
+  gap: 27px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: end;
+  align-items: stretch;
+  gap: 12px;
+  padding: 25px;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  padding: 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: 0;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--main-color);
+}
+
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;
+}
+
+.button {
+  border: 2px solid var(--main-color);
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  background-color: var(--background-color);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px var(--main-color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  translate: -100% 0%;
+}
+
+.button:hover::before {
+  animation: move 1s ease-in-out;
+}
+
+.card__like-button {
+  inline-size: 130px;
+}
+
+.footer {
+  padding-block-end: 100px;
+  padding-block-start: 50px;
+}
+
+.save-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+}
+
+.button-icon {
+  block-size: 21px;
+  inline-size: 21px;
+}
+
+.button__text,
+.button-text,
+.button-icon {
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+dialog {
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal {
+  border: 2px solid var(--main-color);
+  padding: 30px;
+  font-family: var(--accent-font);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--background-color);
+  color: var(--main-color);
+  max-inline-size: 357px;
+}
+
+.modal[open] {
+  display: grid;
+  gap: 30px;
+  grid-template-rows: repeat(2, min-content);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+.modal-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.modal-text {
+  font-size: 14px;
+}
+
+.modal-button {
+  inline-size: 100%;
+  block-size: 38px;
+}
+
+.modal-button-text {
+  font-size: 14px;
+}
+
+@supports ((-webkit-text-stroke: 1px var(--text-stroke)) or (text-stroke: 1px var(--text-stroke))) {
+  .card-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke);
+    text-stroke: 1px var(--text-stroke);
+  }
+}
+
+@media (width <=375px) {
+
+  .save-button {
+    flex-direction: column;
+  }
+
+  .button-icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
 }
