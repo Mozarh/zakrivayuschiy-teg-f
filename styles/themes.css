@@ -15,9 +15,8 @@
     --color-like-contour: #000;
 
     --background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
-        repeating-linear-gradient(to top, #d3d3d3 0 2px, transparent 2px 4px),
-        linear-gradient(to top, #e7e7e7 0.01%, #1a1a1a);
-
+        repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+        linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
 
 
@@ -32,8 +31,25 @@
     --color-like-contour: #00CC14;
 
     --background-image: repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
-        repeating-linear-gradient(to top, #000 0 2px, transparent 2px 4px),
-        linear-gradient(to top, #007f0c, #004306);
+        repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+        linear-gradient(to bottom, #007f0c, #004306);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-font-size: 400;
+        --title-font-size: 700;
+
+        --background-color: #fff;
+        --main-color: #000;
+        --text-stroke: #fff;
+        --button-text-color: #fff;
+        --color-like-contour: #000;
+
+        --background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
+            repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+            linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,9 +59,12 @@
 
         --background-color: #000;
         --main-color: #00CC14;
+        --text-stroke: #000;
+        --button-text-color: #00CC14;
+        --color-like-contour: #00CC14;
 
         --background-image: repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
-            repeating-linear-gradient(to top, #000 0 2px, transparent 2px 4px),
-            linear-gradient(to top, #007f0c, #004306);
+            repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+            linear-gradient(to bottom, #007f0c, #004306);
     }
 }

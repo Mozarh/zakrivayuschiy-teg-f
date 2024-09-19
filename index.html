@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Закрывающий тег" />
     <meta property="og:url" content="https://zakryvayuchiy-teg-f.com" />
-    <meta property="og:image" content="./images/school.png" />
+    <meta property="og:image" content="./images/car.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
@@ -22,7 +22,7 @@
   </head>
   <body class="page">
     <header class="header card">
-      <span class="header-title">&lt;/HTML&gt;</span>
+      <a class="header-title">&lt;/HTML&gt;</a>
       <h1 class="header-subtitle">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -60,13 +60,32 @@
               </h2>
             </header>
             <div class="container-card-img">
-              <span class="card-label">&lt;/HTML&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись из букв на столе"
-                class="card-img fritrek"
-                loading="lazy"
-              />
+              <span class="card-label">&lt;/html&gt;</span>
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img fritrek"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -74,10 +93,7 @@
                 проникнуться основами и настроиться на учёбу. И, возможно,
                 подумать, как новые знания могут повлиять на ваше будущее.
               </p>
-              <p>
-                Это было очень вдохновляюще и интригующе, ведь я задумался о
-                смене профессии.
-              </p>
+              <p>Место для ваших воспоминаний о начале обучения.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -92,7 +108,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -108,7 +124,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -126,13 +142,32 @@
               <h2 class="card-title">1 спринт: Я — чистый лист</h2>
             </header>
             <div class="container-card-img">
-              <span class="card-label">&lt;/CSS&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img sprint"
-                loading="lazy"
-              />
+              <span class="card-label">&lt;/css&gt;</span>
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img sprint"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -143,11 +178,7 @@
                 вопросы: с чего начать? а вдруг будет слишком сложно? что, если
                 я не справлюсь?
               </p>
-              <p>
-                На первых этапах обращался за советом к друзьям, многие из моего
-                круга общения меняли профессию. Кто-то стал аналитиком, кто-то
-                дизайнером, а кто-то наоборот ушел из айти в другую сферу.
-              </p>
+              <p>Место для ваших воспоминаний о начале первого спринта.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -162,7 +193,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -178,7 +209,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -196,13 +227,32 @@
               <h2 class="card-title">1 спринт: А если не получится?</h2>
             </header>
             <div class="container-card-img">
-              <span class="card-label">&lt;/ONO-NADO&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img ono-nado"
-                loading="lazy"
-              />
+              <span class="card-label">&lt;/ono-nado&gt;</span>
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img ono-nado"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -210,12 +260,7 @@
                 Радость могла быстро померкнуть и смениться ожиданием провала.
                 Или вы, наоборот, могли вдохновиться успехами и поверить в себя.
               </p>
-              <p>
-                Во время выполнения 1 проекта было много вопросов и
-                недопаниманий, а если у меня не получится, но я смог сдать
-                проект и сейчас, смотря на первую верстку проект не кажется
-                таким сложным.
-              </p>
+              <p>Место для ваших воспоминаний об окончании первого спринта.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -230,7 +275,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -246,7 +291,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -264,13 +309,32 @@
               <h2 class="card-title">2 спринт: Погоня за идеалом</h2>
             </header>
             <div class="container-card-img">
-              <span class="card-label">&lt;VK&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img vk"
-                loading="lazy"
-              />
+              <span class="card-label">&lt;vk&gt;</span>
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img vk"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -280,11 +344,7 @@
                 вовсе и не подвержены перфекционизму и вместо того, чтобы
                 сделать идеально, старались просто сделать.
               </p>
-              <p>
-                Дальнеешее обучение меня только мотивировало, я продолжал искать
-                информацию на сторонних ресурсах помимо знаний Яндекс
-                практикума.
-              </p>
+              <p>Место для ваших воспоминаний о начале второго спринта.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -299,7 +359,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -315,7 +375,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -334,12 +394,31 @@
             </header>
             <div class="container-card-img">
               <span class="card-label">&lt;friend&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img friend"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img friend"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -350,10 +429,7 @@
                 поддавался. Осваивать что-то новое легче, когда рядом есть
                 единомышленники, не правда ли?
               </p>
-              <p>
-                О том, что я учусь рассказал близкому кругу друзей, и все меня
-                поддержали.
-              </p>
+              <p>Место для ваших воспоминаний об окончании второго спринта.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -368,7 +444,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -384,7 +460,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -403,12 +479,31 @@
             </header>
             <div class="container-card-img">
               <span class="card-label">&lt;chill&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img chill"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img chill"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -416,11 +511,7 @@
                 момент вам могло показаться, что решения просто иссякли. Значит,
                 пришло время посмотреть на задачу под другим углом.
               </p>
-              <p>
-                И тут я понял, что иногда лучше сделать перерыв, чтобы
-                развеяться. Ведь я получаю много информации, и на данный момент
-                не мог разложить все знания по полочкам.
-              </p>
+              <p>Место для ваших воспоминаний о начале третьего спринта.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -435,7 +526,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -451,7 +542,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -470,25 +561,41 @@
             </header>
             <div class="container-card-img">
               <span class="card-label">&lt;concentrate&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img concentrate"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img concentrate"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
                 Во время учёбы часто возникает чувство, когда не знаешь, за что
-                хвататься. Вроде и проектную пора сдавать, и задачи хочется
+                хвататься. Вроде и проектную пора&nbsp;сдавать, и задачи хочется
                 порешать, и в теории получше разобраться, и жизнь не забыть
                 пожить. В такие моменты очень нужна концентрация. Вспомните,
                 откуда вы её черпали.
               </p>
-              <p>
-                Очень помогло в концентрировании - план, по которому я получал
-                знания и не забывал жить эту жизнь.
-              </p>
+              <p>Место для ваших воспоминаний об окончании третьего спринта.</p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -503,7 +610,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -519,7 +626,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -538,12 +645,31 @@
             </header>
             <div class="container-card-img">
               <span class="card-label">&lt;yandex&gt;</span>
-              <img
-                src="./images/school.png"
-                alt="надпись BACK TO SCHOOL из букв на столе"
-                class="card-img yandex"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="images/car-mobile.avif"
+                  media="(max-width: 400px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="images/car-mobile.webp"
+                  media="(max-width: 400px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="images/car-mobile.jpg"
+                  media="(max-width: 400px)"
+                />
+
+                <source srcset="images/car.avif" type="image/avif" />
+                <source srcset="images/car.webp" type="image/webp" />
+                <img
+                  class="card-img yandex"
+                  src="./images/car.jpg"
+                  alt="мультяшный минивэн в лесу"
+                  width="696"
+                />
+              </picture>
             </div>
             <div class="card-content">
               <p>
@@ -554,7 +680,10 @@
                 полностью не получится, но это тот случай, когда важен сам
                 процесс познания. Ведь часто путь — и есть результат.
               </p>
-              <p>И верстать сайты реально КРУТО!</p>
+              <p>
+                Место, чтобы остановиться, подумать и написать, что вы
+                чувствуете в этой точке пути.
+              </p>
             </div>
             <footer class="card-footer">
               <button type="button" class="card__icon-button">
@@ -569,7 +698,7 @@
                   <g class="heart">
                     <path
                       class="contour"
-                      fill="var(--color-like-contour)"
+                      fill="var(--color-like-contour, #000)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -585,7 +714,7 @@
                   </g>
                   <path
                     class="sparks"
-                    fill="var(--color-like-sparks)"
+                    fill="var(--color-like-sparks, red)"
                     d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"
                   />
                 </svg>
@@ -598,7 +727,7 @@
         </li>
       </ul>
 
-      <footer class="footer">
+      <div class="modal-container">
         <button
           type="button"
           class="button save-button"
@@ -610,7 +739,7 @@
           </svg>
           <span class="button-text">Сохранить на память</span>
         </button>
-      </footer>
+      </div>
     </main>
 
     <dialog class="modal" id="dialog-id">

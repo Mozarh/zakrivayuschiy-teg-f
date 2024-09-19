@@ -15,11 +15,11 @@
 */
 
 .page {
-  font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght'var(--text-font-size);
-  color: var(--main-color);
-  background-color: var(--background-color);
-  background-image: var(--background-image);
+  font-family: var(--main-font, sans-serif);
+  font-variation-settings: 'wght'var(--text-font-size, 400);
+  color: var(--main-color, #000);
+  background-color: var(--background-color, #fff);
+  background-image: var(--background-image, none);
   background-size: cover;
   background-attachment: fixed;
   padding-block-start: 100px;
@@ -31,20 +31,26 @@
   display: grid;
   justify-content: center;
   justify-items: center;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font, fantasy);
 }
 
 .card {
-  background: var(--background-color);
+  background: var(--background-color, #fff);
   max-inline-size: 696px;
   margin-inline: auto;
-  border: var(--main-color) solid 2px;
+  border: var(--main-color, #000) solid 2px;
 }
 
 .header-title {
   padding-block-start: clamp(7.5rem, 7.148rem + 1.502vi, 8.5rem);
-  padding-block-end: 20px;
+  margin-block-end: 20px;
   font-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);
+  text-transform: uppercase;
+}
+
+.header-title:focus,
+.header-title:focus-visible {
+  outline: none;
 }
 
 .header-subtitle {
@@ -52,15 +58,15 @@
   text-transform: uppercase;
 }
 
+.header-subtitle,
+.theme-menu {
+  padding-block-end: 25px;
+}
+
 .theme-menu__list {
   display: grid;
   gap: 14px;
   inline-size: 84px;
-}
-
-.header-subtitle,
-.theme-menu {
-  padding-block-end: 25px;
 }
 
 .theme-menu__item {
@@ -90,11 +96,6 @@
   cursor: default;
 }
 
-.theme-menu__button:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 .theme-menu__button:not(:disabled):after {
   content: '';
   display: block;
@@ -104,6 +105,11 @@
   block-size: 1px;
   transition: transform 0.3s ease;
   background: currentColor;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .theme-menu__button:focus {
@@ -117,25 +123,25 @@
 
 .main {
   margin-block-start: 100px;
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font, sans-serif);
   display: grid;
   justify-items: center;
 }
 
 .card-list {
   display: grid;
-  gap: 50px;
+  gap: 52px;
 }
 
 .card-header {
-  border-block-end: var(--main-color) solid 2px;
+  border-block-end: var(--main-color, #000) solid 2px;
   padding: 4px 10px;
 }
 
 .card-title {
   font-size: 18px;
-  line-height: 1.2;
-  font-variation-settings: 'wght'var(--title-font-size);
+  line-height: normal;
+  font-variation-settings: 'wght'var(--title-font-size, 700);
 }
 
 .container-card-img {
@@ -146,16 +152,15 @@
 .card-label {
   position: absolute;
   z-index: 1;
-  font-family: var(--accent-font), sans-serif;
-  font-variation-settings: 'wght'var(--text-font-size);
+  font-family: var(--accent-font, fantasy);
+  font-weight: var(--text-font-size, 400);
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--main-color);
+  color: var(--main-color, #000);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  text-shadow: 0 0 1px var(--text-stroke);
-
+  text-shadow: 0 0 1px var(--text-stroke, #fff);
   inset-inline-end: 25px;
   inset-block-start: 25px;
 }
@@ -166,7 +171,6 @@
   object-position: center;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
-  border-block-end: var(--main-color) solid 2px;
 }
 
 .fritrek {
@@ -202,19 +206,20 @@
 }
 
 .card-content {
-  margin: 25px;
+  border-block-start: var(--main-color, #000) solid 2px;
+  padding: 25px 30px 0 25px;
   display: grid;
   gap: 27px;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.17;
 }
 
 .card-footer {
   display: flex;
   justify-content: end;
   align-items: stretch;
-  gap: 12px;
-  padding: 25px;
+  gap: 5px;
+  padding: 25px 25px 23px 25px;
 }
 
 .card__icon-button {
@@ -222,6 +227,7 @@
   padding: 0;
   background: transparent;
   transition: border-color 0.3s ease;
+  display: flex;
 }
 
 .card__icon-button:focus {
@@ -229,7 +235,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--main-color);
+  border-color: var(--main-color, #000);
 }
 
 .like-icon {
@@ -238,10 +244,10 @@
 }
 
 .button {
-  border: 2px solid var(--main-color);
-  font-family: var(--accent-font), sans-serif;
+  border: 2px solid var(--main-color, #000);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff);
   transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -253,14 +259,14 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px var(--main-color);
+  box-shadow: 2px 2px var(--main-color, #000);
 }
 
 .button::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: var(--main-color);
+  background-color: var(--main-color, #000);
   translate: -100% 0%;
 }
 
@@ -272,7 +278,14 @@
   inline-size: 130px;
 }
 
-.footer {
+.button__text,
+.button-text,
+.button-icon {
+  color: var(--button-text-color, #fff);
+  mix-blend-mode: difference;
+}
+
+.modal-container {
   padding-block-end: 100px;
   padding-block-start: 50px;
 }
@@ -290,28 +303,18 @@
   inline-size: 21px;
 }
 
-.button__text,
-.button-text,
-.button-icon {
-  color: var(--button-text-color);
-  mix-blend-mode: difference;
-}
-
-dialog {
+.modal {
+  border: 2px solid var(--main-color, #000);
+  padding: 30px;
+  font-family: var(--accent-font, fantasy);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--background-color, #fff);
+  color: var(--main-color, #000);
+  max-inline-size: 357px;
   position: fixed;
   inset: 0;
   transition: opacity 0.3s ease-in-out;
-}
-
-.modal {
-  border: 2px solid var(--main-color);
-  padding: 30px;
-  font-family: var(--accent-font);
-  line-height: 1.5;
-  text-transform: uppercase;
-  background: var(--background-color);
-  color: var(--main-color);
-  max-inline-size: 357px;
 }
 
 .modal[open] {
@@ -320,8 +323,8 @@ dialog {
   grid-template-rows: repeat(2, min-content);
 }
 
-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.8);
+.modal::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .modal-content {
@@ -338,6 +341,7 @@ dialog::backdrop {
 
 .modal-text {
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 .modal-button {
@@ -347,17 +351,25 @@ dialog::backdrop {
 
 .modal-button-text {
   font-size: 14px;
+  text-transform: lowercase;
 }
 
 @supports ((-webkit-text-stroke: 1px var(--text-stroke)) or (text-stroke: 1px var(--text-stroke))) {
   .card-label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--text-stroke);
-    text-stroke: 1px var(--text-stroke);
+    -webkit-text-stroke: 1px var(--text-stroke, #fff);
+    text-stroke: 1px var(--text-stroke, #fff);
   }
 }
 
-@media (width <=375px) {
+@media (width <=376px) {
+  .card-list {
+    gap: 50px;
+  }
+
+  .card-content {
+    padding: 25px 25px 0 25px;
+  }
 
   .save-button {
     flex-direction: column;
